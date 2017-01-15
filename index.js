@@ -1,3 +1,9 @@
-/**
- * Created by stephenlv on 17/1/15.
- */
+'use strict';
+
+import React, {
+    NativeModules,
+} from 'react-native';
+
+const UmengApp = NativeModules.UmengAppManager;
+
+module.exports = UmengApp;

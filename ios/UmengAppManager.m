@@ -6,7 +6,7 @@
 //
 
 #import "UmengAppManager.h"
-#import "UMMobClick/MobClick.h"
+#import "MobClick.h"
 
 @implementation UmengAppManager
 

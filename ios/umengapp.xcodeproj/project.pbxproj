@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9199AE7F1E2BA98E0029323B /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9199AE7E1E2BA98E0029323B /* UMMobClick.framework */; };
 		9199AE821E2BA9E70029323B /* UmengAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9199AE811E2BA9E70029323B /* UmengAppManager.m */; };
+		91D537BB1E2BBEA100E04F66 /* libUMMobClick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D537BA1E2BBEA100E04F66 /* libUMMobClick.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9199AE7E1E2BA98E0029323B /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = thirdparty/UMMobClick.framework; sourceTree = "<group>"; };
 		9199AE801E2BA9E70029323B /* UmengAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UmengAppManager.h; sourceTree = SOURCE_ROOT; };
 		9199AE811E2BA9E70029323B /* UmengAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UmengAppManager.m; sourceTree = SOURCE_ROOT; };
 		91C2001F1E2BA86200825BDA /* libumengapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libumengapp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D537BA1E2BBEA100E04F66 /* libUMMobClick.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUMMobClick.a; path = thirdparty/MobClick/libUMMobClick.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9199AE7F1E2BA98E0029323B /* UMMobClick.framework in Frameworks */,
+				91D537BB1E2BBEA100E04F66 /* libUMMobClick.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +45,7 @@
 		91C200161E2BA86200825BDA = {
 			isa = PBXGroup;
 			children = (
-				9199AE7E1E2BA98E0029323B /* UMMobClick.framework */,
+				91D537BA1E2BBEA100E04F66 /* libUMMobClick.a */,
 				91C200211E2BA86200825BDA /* umengapp */,
 				91C200201E2BA86200825BDA /* Products */,
 			);
@@ -216,11 +216,18 @@
 		91C200291E2BA86200825BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../React/**",
 					"$(inherited)",
-					"$(PROJECT_DIR)/thirdparty",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/../../../node_modules/react-native/React/**",
+					"$(PROJECT_DIR)/thirdparty/MobClick/Headers",
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/thirdparty/MobClick",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -230,11 +237,18 @@
 		91C2002A1E2BA86200825BDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../React/**",
 					"$(inherited)",
-					"$(PROJECT_DIR)/thirdparty",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/../../../node_modules/react-native/React/**",
+					"$(PROJECT_DIR)/thirdparty/MobClick/Headers",
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/thirdparty/MobClick",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
