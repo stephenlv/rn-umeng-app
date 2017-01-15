@@ -4,6 +4,9 @@ import React, {
     NativeModules,
 } from 'react-native';
 
-const UmengApp = NativeModules.UmengAppManager;
+const UmengAppManager = NativeModules.UmengAppManager;
 
-module.exports = UmengApp;
+module.exports = {
+    enterPage: UmengAppManager.enterPage,
+    leavePage: UmengAppManager.leavePage
+};
