@@ -1,0 +1,31 @@
+{
+  "name": "rn-umeng-app",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenlv/rn-umeng-app"
+  },
+  "keywords": [
+  	"react-native",
+	"umengapp",
+    "umeng",
+    "u-app",
+    "umeng-app",
+    "react-native",
+    "rn-umeng-app"
+  ],
+  "author": "HongAnDuoWei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenlv/rn-umeng-app/issues"
+  },
+  "homepage": "https://github.com/stephenlv/rn-umeng-app#readme",
+  "description": ""
+}
